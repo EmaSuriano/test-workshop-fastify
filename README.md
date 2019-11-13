@@ -8,6 +8,7 @@
 4. Create auth plugin using `fastify-basic-auth`
 5. Test auth plugin inside `test/plugins`
 6. Add new route `/me` that will return the information of the user
+7. Test route `/me` with two possible paths
 
 ## Resources given in the workshop
 
