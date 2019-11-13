@@ -13,9 +13,12 @@ const topics = {
   jon: ['sword', 'night', 'know'],
 };
 
-const basicAuthPlugin = async (fastify, opts) => {
+async function basicAuthPlugin(fastify, opts) {
   const validate = async (username, password, req, reply) => {
+    console.log('Validation in progress');
+
     if (users[username] !== password) {
+      console.log('should throw');
       throw new Error('Invalid username or password');
     }
 
@@ -24,9 +27,9 @@ const basicAuthPlugin = async (fastify, opts) => {
       topics: topics[username],
     };
   };
-
+  console.log('plugin loaded!');
   fastify.register(basicAuth, { validate });
   fastify.decorateRequest('user', null);
-};
+}
 
 module.exports = fp(basicAuthPlugin);
