@@ -14,7 +14,9 @@
    2. Setup your `app.js` with the Instructions in the Resources at the bottom
 9. Create a new route `/post` that will receive an object with the property `text` and create an object with the structure of: `{id, user, topics, text, time, }` and log it into Elastic Search.
 10. Create test for `/post`, sending the request and then checking if the record is in elastic search.
-11.
+11. Create new endpoind `/tweet/:id` that will return the information of a tweet given the id sent by parameters.
+12. Add test
+13. Create the endpoind `/timeline`
 
 ## Resources given in the workshop
 

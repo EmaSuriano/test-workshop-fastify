@@ -17,7 +17,7 @@ module.exports = function(fastify, opts, next) {
       },
     },
     handler: async (request, reply) => {
-      const id = instance();
+      const id = instance.uuid;
 
       const response = {
         id,
